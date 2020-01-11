@@ -1,0 +1,40 @@
+<title>BondEValue User Form</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<style>
+  .width-80{
+      width: 70%;
+  }
+  .button {
+      height: 50px;
+      width: 100px;
+      align-self: center;
+  }
+</style>
+
+<div class="container width-80">
+    <br />
+    <h2 style="text-align: center;">BondEValue User Form</h2>
+    <br />
+    <form action="" method="post" >
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{form.name.label}}
+            {{form.name(id="name", placeholder="What's your name?", class="form-control")}}
+            <br />
+            <br />
+            {{form.customer_type.label}}
+            {{form.customer_type(class="form-check", type="radio", style="list-style-type:none")}}
+            <br />
+            {{form.price.label}}
+            {{form.price(id="price", placeholder="Fill the price you want to buy/sell for?", class="form-control")}}
+            <br />
+            {{form.submit(class="btn btn-success button")}}
+            <br />
+        </div>
+    </form>
+</div>
